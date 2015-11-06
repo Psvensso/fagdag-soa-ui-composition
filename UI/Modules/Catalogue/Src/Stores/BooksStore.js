@@ -1,4 +1,7 @@
+import React from 'react';
 import Reflux from "reflux";
+
+const baseUrl = "http://localhost:9000";
 
 export var BookActions = Reflux.createActions({
     "loadBooks": {children: ["completed","failed"]}

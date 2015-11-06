@@ -1,14 +1,11 @@
 // Mixins
 import "../../../jspm_packages/npm/materialize-css@0.97.1/dist/css/materialize.css!css";
 import React from 'react';
-import Reflux from "reflux";
 import {render} from 'react-dom';
 import { Router, Route, Link } from 'react-router'
-const baseUrl = "http://localhost:9000";
-
-
-
-
+import Books from "./Components/Book/BooksList.jsx!jsx";
+import Book from "./Components/Book/Book.jsx!jsx";
+import Wrapper from "./Components/MainLayoutWrapper/Wrapper.jsx!jsx";
 
 const NoMatch = React.createClass({
     render() {

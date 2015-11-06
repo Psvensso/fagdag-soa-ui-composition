@@ -1,5 +1,6 @@
 import React from 'react';
 import Reflux from "reflux";
+import {BookStore, BookActions} from "../../Stores/BooksStore";
 
 export default React.createClass({
     mixins: [Reflux.connect(BookStore, "books")],
