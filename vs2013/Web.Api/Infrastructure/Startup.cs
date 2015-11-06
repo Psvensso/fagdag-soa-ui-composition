@@ -20,7 +20,7 @@ namespace Web.Api.Infrastructure
             jsonFormatter.SerializerSettings.Formatting = Formatting.Indented;
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-
+            appBuilder.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             appBuilder.Use<ResponseLogger>();
             appBuilder.Use<RequestLogger>();
 

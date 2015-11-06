@@ -29,5 +29,17 @@ namespace Web.Api.Controllers
                 {"cover-large", string.Format(url, "L")},
             };
         }
+
+        [Route("imageurls/{id}/{size}")]
+        public string GetImageUrl(string id, string size = "S")
+        {
+            // https://openlibrary.org/dev/docs/api/covers
+
+            var parts = id.Split('-');
+
+            var url = string.Format("http://covers.openlibrary.org/b/{0}/{1}-{{0}}.jpg", parts[0], parts[1]);
+
+            return string.Format(url, size);
+        }
     }
 }

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Book Store - Catalogue</title>
+  <meta name="description" content="UI">
+  <meta name="author" content="SitePoint">
+  <script src="../../jspm_packages/system.js"></script>
+  <script src="../../config.js"></script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<div id="catalogue"></div>
+    <script>
+        System.import("./Src/catalogue.sass!sass");
+        System.import("./Src/main.jsx!jsx").then(function () {
+            console.log("Done loading bundle");
+        });
+    </script>
+</body>
+</html>
